@@ -7,14 +7,14 @@ from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 from PIL import Image
 
 def plot_lens_diagram(lens_type, focal_length, object_distance, canvas_frame):
-    # Clear existing plots
+    
     for widget in canvas_frame.winfo_children():
         widget.destroy()
 
-    # Create figure and axes
+    # figures
     fig, ax = plt.subplots(figsize=(8, 4))
 
-    # Drawing the optical axis
+    # optical axis
     ax.axhline(0, color='black', linewidth=0.8)
     ax.axvline(0, color='gray', linestyle='--', linewidth=0.8, label="Lens Position")
 
